@@ -1,12 +1,495 @@
-<html>
-    <head>
-        <title>
-            RGU Chat Bot
-        </title>
-    </head>
-    <body>
-        <h1>My Bot Integration</h1>
-        <script type="text/javascript">
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+<head>
+            
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KBDGCJH');</script>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=11">
+
+    <script>
+        var jQuery = $.noConflict();
+        // HTML5 Shiv for Picture (IE11 fix)
+        document.createElement("picture");
+    </script>
+        <link rel="preload" href="assets/fonts/zonapro-black-webfont.woff2" as="font">
+    <link rel="preload" href="assets/fonts/zonapro-bold-webfont.woff2" as="font">
+    <link rel="preload" href="assets/fonts/onapro-extrabold-webfont.woff2" as="font">
+    <link rel="preload" href="assets/fonts/zonapro-regular-webfont.woff2" as="font">
+    <link rel="preload" href="assets/fonts/zonapro-semibold-webfont.woff2" as="font">
+        <meta charset="utf-8" />
+    <meta name="twitter:description" content="The IT Helpdesk offers support for all your university needs. We support students staff and visitors with everything such as IT accounts, how to connect to the wireless service, accessing and configuring email, print, copy and scan, and the" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="IT Helpdesk | RGU" />
+    <meta property="og:url" content="https://www.rgu.ac.uk/it-helpdesk" />
+    <meta property="twitter:creator" content="@robertgordonuni" />
+    <meta property="twitter:site" content="@robertgordonuni" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="og:description" content="The IT Helpdesk offers support for all your university needs. We support students staff and visitors with everything such as IT accounts, how to connect to the wireless service, accessing and configuring email, print, copy and scan, and the" />
+    <meta name="description" content="The IT Helpdesk offers support for all your university needs. We support students staff and visitors with everything such as IT accounts, how to connect to the wireless service, accessing and configuring email, print, copy and scan, and the" />
+    <meta name="generator" content="Joomla! - Open Source Content Management" />
+    <title>IT Helpdesk | RGU</title>
+    <link href="https://www.rgu.ac.uk/it-helpdesk" rel="canonical" />
+   
+    <link href="assets/css/jquery-ui-1.9.2.css" rel="stylesheet" />
+    <link href="assets/css/category.css" rel="stylesheet" />
+    <link href="https://www.rgu.ac.uk/plugins/editors/dropeditor/dropeditor.css" rel="stylesheet" />
+    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet" />
+    <style>
+ol.ol-circles > li:before { background-color: #333333;}
+ol.ol-boxes > li:before { background-color: #333333;}
+#sitenotice {background: #ebebeb; font-size: 18px; padding: 20px;}#sitenotice p {margin: 0; margin-bottom: 10px;} #sitenotice a {margin: 0; color: #006B99 !important;}
+    </style>
+    <script type="application/json" class="joomla-script-options new">{"csrf.token":"6f73600c68f37c91b3c554d9c54436cc","system.paths":{"root":"","base":""},"joomla.jtext":{"FLEXI_FORM_IS_BEING_SUBMITTED":"Form is being submitted ...","FLEXI_APPLYING_FILTERING":"Applying Filtering","FLEXI_TYPE_TO_LIST":"... type to list","FLEXI_TYPE_TO_FILTER":" ... type to filter","FLEXI_UPDATING_CONTENTS":"Updating contents ..."}}</script>
+    <script src="assets/js/jquery.min.js?2a2e65810d31737f14f5de95f23164f9"></script>
+    <script src="assets/js/jquery-noconflict.js?2a2e65810d31737f14f5de95f23164f9"></script>
+    <script src="assets/js/js/jquery-migrate.min.js?2a2e65810d31737f14f5de95f23164f9"></script>
+    <script src="assets/js/jquery.ui.core.min.js?2a2e65810d31737f14f5de95f23164f9"></script>
+    <script src="assets/js/jquery.ui.sortable.min.js?2a2e65810d31737f14f5de95f23164f9"></script>
+    <script src="assets/js/rgu_custom.js?ver=1647940774254" defer></script>
+    <script src="assets/js/picturefill.min.js" defer></script>
+    <script src="https://www.rgu.ac.uk/media/system/js/mootools-core.js" defer></script>
+    <script src="https://www.rgu.ac.uk/media/system/js/core.js" defer></script>
+    <script src="https://www.rgu.ac.uk/media/system/js/mootools-more.js" defer></script>
+    <script src="https://www.rgu.ac.uk/components/com_flexicontent/librairies/jquery/js/jquery-ui/jquery.ui.dialog.min.js" defer></script>
+    <script src="https://www.rgu.ac.uk/components/com_flexicontent/librairies/jquery/js/jquery-ui/jquery.ui.menu.min.js" defer></script>
+    <script src="https://www.rgu.ac.uk/components/com_flexicontent/librairies/jquery/js/jquery-ui/jquery.ui.autocomplete.min.js" defer></script>
+    <script src="https://www.rgu.ac.uk/components/com_flexicontent/librairies/jquery/js/jquery-ui/jquery.ui.progressbar.min.js" defer></script>
+    <script src="https://www.rgu.ac.uk/components/com_flexicontent/assets/js/tmpl-common.js" defer></script>
+    <script src="https://www.rgu.ac.uk/components/com_flexicontent/assets/js/jquery-easing.js" defer></script>
+    <script src="https://www.rgu.ac.uk/components/com_flexicontent/librairies/mousewheel/jquery.mousewheel.min.js" defer></script>
+    <script src="https://www.rgu.ac.uk/components/com_flexicontent/librairies/fancybox/dist/jquery.fancybox.min.js" defer></script>
+    <script>
+
+                var jbase_url_fc = "https:\/\/www.rgu.ac.uk\/";
+                var jroot_url_fc = "https:\/\/www.rgu.ac.uk\/";
+                var jclient_path_fc = "";
+            
+                    var fc_sef_lang = 'en';
+                    var fc_root_uri = '';
+                    var fc_base_uri = '';
+                    var FC_URL_VARS = [];
+
+                    // To be removed ... in v3.3.x
+                    var _FC_GET = [];
+                
+                    jQuery(document).ready(function(){
+                        jQuery('.fancybox').fancybox({
+                            'openEffect'    : 'elastic',
+                            'closeEffect'   : 'elastic',
+                            'openEasing'  : 'easeOutCubic',
+                            'closeEasing' : 'easeInCubic',
+                            'idleTime'    : 0
+                        });
+                    });
+                
+        var fc_validateOnSubmitForm = 1;
+    
+    </script>
+    <!--[if IE 8]>
+                <link href="/components/com_flexicontent/assets/css/ie8.css?c03b5fa08f0fda337c17a0053598d69a" rel="stylesheet" />
+                <![endif]-->
+
+    <link rel="stylesheet" href="assets/css/main.css?ver=1647940774254" />
+    
+    <link rel="stylesheet" href="assets/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+
+    <!-- Print Styles -->
+    <link media="print" rel="stylesheet" href="assets/css/print.css?ver=1647940774254" />
+
+</head>
+<body class="catid-50 theme--default">
+
+            <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KBDGCJH"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    
+                             
+<header id="site-header" class="bg-primary-base">
+        
+        <a href="#content-wrap" id="skip-nav">Skip to content</a>
+
+        <div class="flex-wrap row">
+            <div id="logo">
+                <a href="/"><img src="assets/img/rgu_logo.png" title="Robert Gordon University" alt="Robert Gordon University" /></a>   
+                <button id="menu-toggle"><span class="fas fa-bars"></span></button>             
+                <button id="hide" class="hide"><span class="fas fa-times"></span></button>             
+            </div>
+            <div id="nav">              
+                <div id="menu-wrap" class="flex-wrap col">
+                    <nav aria-label="secondary-site-navigation">
+                        <ul class="nav menu top-nav">
+<li class="item-395"><a href="/about" aria-label="Click to view About section of the website">About</a></li><li class="item-1369"><a href="/staff" >Staff</a></li><li class="item-1367"><a href="/current-students" >Current Students</a></li><li class="item-1366"><a href="/contact-us" aria-label="Click to view Contact Us section of the website">Contact Us</a></li></ul>
+
+                    </nav>
+                    <nav aria-label="primary-site-navigation">
+                        <ul class="nav menu main-nav">
+<li class="item-134"><a href="/study" aria-label="Click to view Study section of the website">Study</a></li><li class="item-135"><a href="/life-at-rgu" aria-label="Click to view Life at RGU section of the website">Life at RGU</a></li><li class="item-136"><a href="/alumni-supporters" aria-label="Click to view Alumni &amp; Supporters section of the website">Alumni &amp; Supporters</a></li><li class="item-138"><a href="/research" aria-label="Click to view Research section of the website">Research</a></li><li class="item-137"><a href="/business-innovation" aria-label="Click to view Business &amp; Innovation section of the website">Business &amp; Innovation</a></li></ul>
+
+                    </nav>
+                
+                    <div id="nav-search">
+                        <div id="site-search" class="site-search">
+    <!-- Form's action must be the results page's URL -->
+<form method="get" action="/search">
+  <!-- Search field's name must be addsearch -->
+  <label>Search this site...</label>
+  <input type="text" id="search-box" name="addsearch" placeholder="Search this site..." autocomplete="off" />
+    <button onclick="toggleSearch()" type="button" id="toggle-icon">  
+      <span class="icon fa fa-search"></span>
+    </button>
+    <button onclick="addsearch.submit()" id="search-icon" class="hidden">
+       <span class="icon fa fa-search"></span>
+    </button>
+    <button onclick="toggleSearch()" type="button" id="search-close" class="hidden">
+      <span class="icon fa fa-times"></span>
+    </button>
+ 
+</form>     
+</div>
+
+                    </div>
+                
+                </div>             
+
+            </div>
+        </div>
+
+    </header>              
+                    
+    <div id="breadcrumbs" class="bg-secondary-light hide-mobile">
+        <script type="application/ld+json">{"@context": "https://schema.org","@type": "BreadcrumbList","itemListElement": [{"@type": "ListItem","position": 0,"name": "Home","item": "https://www.rgu.ac.uk/"},{"@type": "ListItem","position": 1,"name": "IT Helpdesk"}]}</script>
+<ul class="nav breadcrumb  bg-secondary-light">
+
+                <li>
+                
+                                                    
+                    <a href="/" class="pathway">
+                        <span><i class="fas fa-home"></i></span>
+                    </a>
+
+                
+                                    <span class="divider">
+                        &gt;                    </span>
+                            </li>
+
+                    <li class="active">
+                <span>
+                    IT Helpdesk 
+                </span>
+            </li>
+        
+</ul>
+
+            </div>
+        
+                <div id="system-message-container">
+    </div>
+
+
+         
+        
+<div id="sitenotice">
+    <p>Find out the latest guidance and information about the impact of COVID-19 on the University.</p>
+
+<div class="read-more-alternative-button"><a data-link-type="custom" href="https://www.rgu.ac.uk/coronavirus" target="_self" title="COVID-19: Advice for Staff, Students and Community">COVID-19: Advice for Staff, Students and Community</a></div>
+</div>
+
+        
+    
+        <div id="content-wrap">
+
+        
+<!-- BOF - PAGE WRAP -->
+<div id="content-grid">
+
+
+    
+            <!-- Display gateway header item -->
+            
+<div id="page-header-panel" class="page-header-panel">
+
+    
+            <div class="panel-image-wrap angle-overlays">
+                    <div class="header-image full-width-image">
+        <picture>
+                        <source srcset="assets/img/s_IT-Helpdesk-Pexels-263370.jpeg" media="(max-width: 399px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-Pexels-263370.jpeg" media="(max-width: 576px)" />
+                        <source srcset="assets/img/l_IT-Helpdesk-Pexels-263370.jpeg" media="(max-width: 768px)" />
+                        <source srcset="assets/img/m_pexels-photo-263370-1920.jpeg" media="(max-width: 1024px)" />
+                        <source srcset="assets/img/l_pexels-photo-263370-1920.jpeg" media="(max-width: 1599px)" />
+                        <source srcset="assets/img/pexels-photo-263370-1920.jpeg" media="(min-width: 1600px)" />
+                        <img src="assets/img/pexels-photo-263370-1920.jpeg" alt="IT Helpdesk" title="IT Helpdesk"/>
+        </picture>
+    </div>
+            </div>
+
+            <div class="header-text">
+
+        <div class="title-block bg-white angle-right">
+
+                                        <h1>IT Helpdesk</h1>
+            
+        </div>
+                
+
+        <div class="page-intro bg-primary-base-transparent angle-left">
+
+            <div class="text-block">
+                <p>The IT Helpdesk offers support for all your university needs. We support students staff and visitors with everything such as IT accounts, how to connect to the wireless service, accessing and configuring email, print, copy and scan, and the location of IT labs across our campus - and lots more.</p>
+                
+                                                
+                            </div>
+        
+        </div>
+    
+    </div>
+
+    
+    
+            
+
+</div>          
+
+        
+                    <div id="gwInfo" class="content align-wide">
+                <h2 class="drop_h2">IT Service Desk Support Portal</h2>
+
+<p>The IT Service Desk Support Portal allows students and staff to log and monitor any queries or requests. Part of the Portal is a self-help Solutions area (including an FAQ section) that allows a user to view support articles and documents that may help with any issues or questions.</p>
+
+<div class="button"><a data-link-type="custom" href="https://itservicedesk.rgu.ac.uk/" target="_blank" title="IT Service Desk Support Portal">IT Service Desk Support Portal</a></div>
+
+<h2 class="drop_h2">Teaching and Meeting Rooms Info</h2>
+
+<p>IT Services support the Audio Visual equipment in 192 teaching and meeting rooms with a number of digital enhancements having taken place over summer 2021 and more scheduled over the 2021/22 Academic year.</p>
+
+<div class="button"><a data-link-type="custom" href="https://liverguac.sharepoint.com/teams/TeachingRooms" target="_blank" title="Teaching and Meeting Rooms on Campus">Teaching and Meeting Rooms on Campus</a></div>
+
+
+<h2 class="drop_h2">Alternative Contact Methods</h2>
+
+<div class="csRow">
+<div class="csColumn" data-padding="5" data-posx0="0" data-posx1="32.5" style="margin: 0px; padding: 0px; float: left; width:33%;">
+<div style="padding:5px;">
+<div class="csColumn_text"><strong>Email</strong>:&nbsp;<span id="cloak3ce38da8330b09e0b0c3f2129c17c255">This email address is being protected from spambots. You need JavaScript enabled to view it.</span><script type='text/javascript'>
+                document.getElementById('cloak3ce38da8330b09e0b0c3f2129c17c255').innerHTML = '';
+                var prefix = '&#109;a' + 'i&#108;' + '&#116;o';
+                var path = 'hr' + 'ef' + '=';
+                var addy3ce38da8330b09e0b0c3f2129c17c255 = 'ITS&#101;rv&#105;c&#101;D&#101;sk' + '&#64;';
+                addy3ce38da8330b09e0b0c3f2129c17c255 = addy3ce38da8330b09e0b0c3f2129c17c255 + 'rg&#117;' + '&#46;' + '&#97;c' + '&#46;' + '&#117;k';
+                var addy_text3ce38da8330b09e0b0c3f2129c17c255 = 'ITS&#101;rv&#105;c&#101;D&#101;sk' + '&#64;' + 'rg&#117;' + '&#46;' + '&#97;c' + '&#46;' + '&#117;k';document.getElementById('cloak3ce38da8330b09e0b0c3f2129c17c255').innerHTML += '<a ' + path + '\'' + prefix + ':' + addy3ce38da8330b09e0b0c3f2129c17c255 + '\'>'+addy_text3ce38da8330b09e0b0c3f2129c17c255+'<\/a>';
+        </script></div>
+</div>
+</div>
+
+<div class="csColumn" data-padding="5" data-posx0="33.5" data-posx1="66" style="margin: 0px; padding: 0px; float: left; width:33%;">
+<div style="padding:5px;">
+<div class="csColumn_text"><strong>Telephone</strong>:&nbsp;+44 (0) 1224 262777</div>
+</div>
+</div>
+
+<div class="csColumn" data-padding="5" data-posx0="67" data-posx1="99.5" style="margin: 0px; padding: 0px; float: left; width:33%;">
+<div style="padding:5px;">
+<div class="csColumn_text"><strong>Twitter</strong>: <a data-link-type="custom" href="https://twitter.com/rgu_ithelpdesk" target="_blank" title="Twitter - @RGU_ITHelpdesk">@RGU_ITHelpdesk</a></div>
+</div>
+</div>
+
+<div style="clear: both; float: none; display: block; visibility: hidden; width: 0px; font-size: 0px; line-height: 0;">&nbsp;</div>
+</div>            </div>
+            
+    <div class="container"> 
+
+        <section id="gateway-content" class="flex-grid grid-4">
+    
+            
+                
+                <div class="article-preview flex-wrap col grid-item bg-secondary-lightest">
+                        <div class="grid-image">
+        <picture>
+                        <source srcset="assets/img/s_IT-Helpdesk-Password-unsplash-610506.jpeg" media="(max-width: 399px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-Password-unsplash-610506.jpeg" media="(max-width: 576px)" />
+                        <source srcset="assets/img/l_IT-Helpdesk-Password-unsplash-610506.jpeg" media="(max-width: 767px)" />
+                        <source srcset="assets/img/s_IT-Helpdesk-Password-unsplash-610506.jpeg" media="(max-width: 1599px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-Password-unsplash-610506.jpeg" media="(min-width: 1600px)" />
+                        <img src="assets/img/m_IT-Helpdesk-Password-unsplash-610506.jpeg" alt="Account & Password" title="Account & Password"/>
+        </picture>
+    </div>
+                    <div class="preview-text">
+                        <a href="/it-helpdesk/account-password" aria-label="Find Out More about Account & Password" class="h2">
+                            <h2>Account & Password</h2>
+                        </a>
+                        <p>Your RGU username and password will let you log in to computers on campus, plus MyApps, the VLE (CampusMoodle), Sharepoint (RGyoU), Wi-Fi (eduroam), email and much more, depending on your status.</p>
+                    </div>
+                    <a href="/it-helpdesk/account-password" class="more-link" aria-label="Find Out More about Account & Password"><i class="fas fa-arrow-right"></i> Find Out More</a>
+                </div>
+
+            
+                
+                <div class="article-preview flex-wrap col grid-item bg-secondary-lightest">
+                        <div class="grid-image">
+        <picture>
+                        <source srcset="assets/img/s_Pexels-people-standing-next-to-window-using-their-phones-3183138.jpeg" media="(max-width: 399px)" />
+                        <source srcset="assets/img/m_Pexels-people-standing-next-to-window-using-their-phones-3183138.jpeg" media="(max-width: 576px)" />
+                        <source srcset="assets/img/l_Pexels-people-standing-next-to-window-using-their-phones-3183138.jpeg" media="(max-width: 767px)" />
+                        <source srcset="assets/img/s_Pexels-people-standing-next-to-window-using-their-phones-3183138.jpeg" media="(max-width: 1599px)" />
+                        <source srcset="assets/img/m_Pexels-people-standing-next-to-window-using-their-phones-3183138.jpeg" media="(min-width: 1600px)" />
+                        <img src="assets/img/m_Pexels-people-standing-next-to-window-using-their-phones-3183138.jpeg" alt="Wireless Access" title="Wireless Access"/>
+        </picture>
+    </div>
+                    <div class="preview-text">
+                        <a href="/it-helpdesk/wireless-access" aria-label="Find Out More about Wireless Access" class="h2">
+                            <h2>Wireless Access</h2>
+                        </a>
+                        <p>Wifi is available across the university. University staff and students should use the secure and constantly free “eduroam” wireless service with The Cloud available for non-eduroam users.</p>
+                    </div>
+                    <a href="/it-helpdesk/wireless-access" class="more-link" aria-label="Find Out More about Wireless Access"><i class="fas fa-arrow-right"></i> Find Out More</a>
+                </div>
+
+            
+                
+                <div class="article-preview flex-wrap col grid-item bg-secondary-lightest">
+                        <div class="grid-image">
+        <picture>
+                        <source srcset="assets/img/s_IT-Helpdesk-Email-pexels1061588.jpeg" media="(max-width: 399px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-Email-pexels1061588.jpeg" media="(max-width: 576px)" />
+                        <source srcset="assets/img/l_IT-Helpdesk-Email-pexels1061588.jpeg" media="(max-width: 767px)" />
+                        <source srcset="assets/img/s_IT-Helpdesk-Email-pexels1061588.jpeg" media="(max-width: 1599px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-Email-pexels1061588.jpeg" media="(min-width: 1600px)" />
+                        <img src="assets/img/m_IT-Helpdesk-Email-pexels1061588.jpeg" alt="Email" title="Email"/>
+        </picture>
+    </div>
+                    <div class="preview-text">
+                        <a href="/it-helpdesk/email" aria-label="Find Out More about Email" class="h2">
+                            <h2>Email</h2>
+                        </a>
+                        <p>The email service is the main form of communication for all staff and students, so why not setup your account on your phone and\or tablet using our handy guides?</p>
+                    </div>
+                    <a href="/it-helpdesk/email" class="more-link" aria-label="Find Out More about Email"><i class="fas fa-arrow-right"></i> Find Out More</a>
+                </div>
+
+            
+                
+                <div class="article-preview flex-wrap col grid-item bg-secondary-lightest">
+                        <div class="grid-image">
+        <picture>
+                        <source srcset="assets/img/s_IT-Helpdesk-Print-Copy-Scan-pixabay-1614223_1920.jpeg" media="(max-width: 399px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-Print-Copy-Scan-pixabay-1614223_1920.jpeg" media="(max-width: 576px)" />
+                        <source srcset="assets/img/l_IT-Helpdesk-Print-Copy-Scan-pixabay-1614223_1920.jpeg" media="(max-width: 767px)" />
+                        <source srcset="assets/img/s_IT-Helpdesk-Print-Copy-Scan-pixabay-1614223_1920.jpeg" media="(max-width: 1599px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-Print-Copy-Scan-pixabay-1614223_1920.jpeg" media="(min-width: 1600px)" />
+                        <img src="assets/img/m_IT-Helpdesk-Print-Copy-Scan-pixabay-1614223_1920.jpeg" alt="Print, Copy & Scan" title="Print, Copy & Scan"/>
+        </picture>
+    </div>
+                    <div class="preview-text">
+                        <a href="/it-helpdesk/print-copy-scan" aria-label="Find Out More about Print, Copy & Scan" class="h2">
+                            <h2>Print, Copy & Scan</h2>
+                        </a>
+                        <p>RGU uses a print queue called Print@RGU, which is available university wide, allowing both staff and students to collect print jobs from Canon Multifunctional Devices (MFDs) that are scattered across the University campus.</p>
+                    </div>
+                    <a href="/it-helpdesk/print-copy-scan" class="more-link" aria-label="Find Out More about Print, Copy & Scan"><i class="fas fa-arrow-right"></i> Find Out More</a>
+                </div>
+
+            
+                
+                <div class="article-preview flex-wrap col grid-item bg-secondary-lightest">
+                        <div class="grid-image">
+        <picture>
+                        <source srcset="assets/img/s_IT-Helpdesk-MyApps-Pexels-842548.jpeg" media="(max-width: 399px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-MyApps-Pexels-842548.jpeg" media="(max-width: 576px)" />
+                        <source srcset="assets/img/l_IT-Helpdesk-MyApps-Pexels-842548.jpeg" media="(max-width: 767px)" />
+                        <source srcset="assets/img/s_IT-Helpdesk-MyApps-Pexels-842548.jpeg" media="(max-width: 1599px)" />
+                        <source srcset="assets/img/m_IT-Helpdesk-MyApps-Pexels-842548.jpeg" media="(min-width: 1600px)" />
+                        <img src="assets/img/m_IT-Helpdesk-MyApps-Pexels-842548.jpeg" alt="MyApps" title="MyApps"/>
+        </picture>
+    </div>
+                    <div class="preview-text">
+                        <a href="/it-helpdesk/myapps" aria-label="Find Out More about MyApps" class="h2">
+                            <h2>MyApps</h2>
+                        </a>
+                        <p>Access many applications including some course software, email, H drive and S drive anywhere, as if you were on campus.</p>
+                    </div>
+                    <a href="/it-helpdesk/myapps" class="more-link" aria-label="Find Out More about MyApps"><i class="fas fa-arrow-right"></i> Find Out More</a>
+                </div>
+
+            
+                
+                <div class="article-preview flex-wrap col grid-item bg-secondary-lightest">
+                        <div class="grid-image">
+        <picture>
+                        <source srcset="assets/img/s_Dept-ITS-Pixabay-laptop-820274_1920.jpeg" media="(max-width: 399px)" />
+                        <source srcset="assets/img/m_Dept-ITS-Pixabay-laptop-820274_1920.jpeg" media="(max-width: 576px)" />
+                        <source srcset="assets/img/l_Dept-ITS-Pixabay-laptop-820274_1920.jpeg" media="(max-width: 767px)" />
+                        <source srcset="assets/img/s_Dept-ITS-Pixabay-laptop-820274_1920.jpeg" media="(max-width: 1599px)" />
+                        <source srcset="assets/img/m_Dept-ITS-Pixabay-laptop-820274_1920.jpeg" media="(min-width: 1600px)" />
+                        <img src="assets/img/m_Dept-ITS-Pixabay-laptop-820274_1920.jpeg" alt="Contact IT Services" title="Contact IT Services"/>
+        </picture>
+    </div>
+                    <div class="preview-text">
+                        <a href="/it-helpdesk/contact-it-services" aria-label="Find Out More about Contact IT Services" class="h2">
+                            <h2>Contact IT Services</h2>
+                        </a>
+                        <p>Contact us by email, telephone or get help in person on campus</p>
+                    </div>
+                    <a href="/it-helpdesk/contact-it-services" class="more-link" aria-label="Find Out More about Contact IT Services"><i class="fas fa-arrow-right"></i> Find Out More</a>
+                </div>
+
+                        
+        </section>
+
+    </div>
+        
+</div>
+
+<!-- Display Related Items -->
+
+ 
+
+    
+    
+    
+</div>      
+    
+        
+    
+        
+         
+
+<footer id="footer" class="bg-darker">
+        
+
+<div class="custom-text container content  social">
+    <ul class="nav">
+    <li><a aria-label="Follow RGU on Twitter" href="https://www.twitter.com/robertgordonuni/" id="footer-twitter" rel="noopener" target="_blank"><span class="fab fa-twitter fa-3x"></span></a></li>
+    <li><a aria-label="Follow RGU on Instagram" href="https://www.instagram.com/robertgordonuni/" id="footer-instagram" rel="noopener" target="_blank"><span class="fab fa-instagram fa-3x"></span></a></li>
+    <li><a aria-label="Follow RGU on Facebook" href="https://www.facebook.com/robertgordonuniversity/" id="footer-facebook" rel="noopener" target="_blank"><span class="fab fa-facebook fa-3x"></span></a></li>
+    <li><a aria-label="Follow RGU on YouTube" href="https://www.youtube.com/user/RobertGordonUni" id="footer-youtube" rel="noopener" target="_blank"><span class="fab fa-youtube fa-3x"></span></a></li>
+    <li><a aria-label="Find us on LinkedIn" href="https://www.linkedin.com/school/robert-gordon-university/" id="footer-linkedin" rel="noopener" target="_blank"><span class="fab fa-linkedin fa-3x"></span></a></li>
+</ul>
+</div>
+<ul class="nav menu">
+<li class="item-125"><a href="/academic-calendar" >Academic Calendar</a></li><li class="item-124 current active"><a href="/it-helpdesk" >IT Helpdesk</a></li><li class="item-633"><a href="/library" aria-label="Click to view Library section of the website">Library</a></li><li class="item-122"><a href="http://campusmoodle.rgu.ac.uk" aria-label="Click to view CampusMoodle section of the website">CampusMoodle</a></li><li class="item-121"><a href="https://you.rgu.ac.uk" aria-label="Click to view RGyoU section of the website">RGyoU</a></li><li class="item-248"><a href="/events" >Events</a></li><li class="item-249"><a href="/news" >News</a></li></ul>
+<ul class="nav menu">
+<li class="item-128"><a href="/about/university-policies" aria-label="Click to view University Policies section of the website">University Policies</a></li><li class="item-126"><a href="/transport-and-parking" >Transport &amp; Parking</a></li><li class="item-514"><a href="/opening-hours" aria-label="Click to view Opening Hours section of the website">Opening Hours</a></li><li class="item-1181"><a href="/jobs" >Jobs</a></li></ul>
+<ul class="nav menu">
+<li class="item-1377"><a href="/sitemap" >Sitemap</a></li><li class="item-1044"><a href="/privacy-and-cookie-statement" >Privacy &amp; Cookie Statement</a></li><li class="item-1043"><a href="/freedom-of-information" >FOI</a></li><li class="item-1360"><a href="/whistleblowing" target="_blank" rel="noopener noreferrer" aria-label="Click to view Whistleblowing section of the website">Whistleblowing</a></li><li class="item-786"><a href="/complaints" >Complaints</a></li><li class="item-1047"><a href="/modern-slavery-statement" >Modern Slavery Statement</a></li><li class="item-1041"><a href="/accessibility" >Accessibility</a></li></ul>
+
+
+<div id="mod-custom-footeraddress" class="custom"  >
+    <p>Robert Gordon University, Garthdee House, Garthdee Road, Aberdeen, AB10 7QB, Scotland, UK</p>
+
+<p>A Scottish charity, registration No. SC013781</p>
+</div>
+  
+</footer>
+    
+            
+<script type="text/javascript">
             (function(d, m){
                 var kommunicateSettings = 
                     {"appId":"25bff0d6a6fd02a75c24ec0eb24365fd3","popupWidget":true,"automaticChatOpenOnNavigation":true};
@@ -16,6 +499,8 @@
                 window.kommunicate = m; m._globals = kommunicateSettings;
             })(document, window.kommunicate || {});
         /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
-        </script>
-    </body>
+        </script>    
+            
+
+</body>
 </html>
